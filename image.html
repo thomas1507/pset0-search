@@ -15,23 +15,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 right-align-links">
-                    <a href="image.html">Image Search</a>
-                    <a href="advanced.html">Advanced Search</a>
+                    <a href="index.html">Back to search</a>
                 </div>
             </div>
-            <div class="row mt-3 justify-content-center">
-                <div class="col-md-8">
-                    <form action="https://www.google.com/search" method="GET" class="d-grid gap-3">
-                        <input type="text" name="q" class="form-control rounded-pill" placeholder="Search Google">
-    
-                        <div class="d-flex justify-content-evenly">
-                            <!-- G search -->
-                            <button type="submit" class="btn btn-primary">Google Search</button>
-    
-                            <!-- I'm Feeling Lucky Button  using nested form, we use name to use im feeling lucky-->
-                            <button type="submit" name="btnI" value="1" class="btn btn-primary">I'm Feeling Lucky</button>
-                        </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    
+                </div>
+                <div class="col-6" text-center>
+                    <form action="https://www.google.com/search" class="search-form" method="GET">
+                        <input type="text" name="q" class="form-control rounded-pill search-input" placeholder="Search Google">
+                        <!-- Hidden input fields so we can make sure we search for an image-->
+                        <input type="hidden" name="sclient" value="img">
+                        <input type="hidden" name="udm" value="2"> 
+                        <input type="submit" value="Image Search" class="btn btn-primary mt-3 rounded-pill search-button">
                     </form>
+                </div>
+                <div class="col-3">
+                    
                 </div>
             </div>
         </div>
